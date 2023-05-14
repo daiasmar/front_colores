@@ -12,7 +12,7 @@ function cambiarHEX(number){
     return number.toString(16)
 }
 
-fetch('http://localhost:4000')
+fetch('https://api-colores.vercel.app/')
 .then(res => res.json())
 .then(({r,g,b}) => {
     cambiarColor(cambiarHEX(`#${[r,g,b].map(num => cambiarHEX(num)).join('')}`))
