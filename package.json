@@ -1,0 +1,10 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Servir colores de una API que genera colores al azar",
+  "main": "index.js",
+ 
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
