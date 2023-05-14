@@ -8,8 +8,12 @@ function cambiarColor(codigo){
     titulo.innerHTML = codigo
 }
 
+function cambiarHEX(number){
+    return number.toString(16)
+}
+
 fetch('http://localhost:4000')
 .then(res => res.json())
-.then(color => {
-    console.log(color)
+.then(({r,g,b}) => {
+    cambiarColor(cambiarHEX(`#${[r,g,b].map(num => cambiarHEX(num)).join('')}`))
 })

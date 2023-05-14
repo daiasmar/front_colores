@@ -27,6 +27,8 @@ function servirFichero(respuesta,ruta,tipo,status){
     respuesta.on('end', ()=> respuesta.end())
 }
 
+const puerto = process.env.PORT || 3000
+
 createServer((peticion,respuesta) => {
     if(peticion.url == '/'){
         servirFichero(respuesta,join(__dirname,directorioPuclico,'index.html'),contentType('html'),200)
@@ -40,4 +42,4 @@ createServer((peticion,respuesta) => {
             }
         })
     }
-}).listen(3000)
+}).listen(puerto)
